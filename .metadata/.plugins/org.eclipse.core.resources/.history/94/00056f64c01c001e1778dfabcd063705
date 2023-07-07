@@ -1,0 +1,26 @@
+package Service;
+
+import java.util.ArrayList;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+import domaine.Etudiant;
+
+@WebService
+public class GestionEtudiant 
+{
+    private static final ArrayList<Etudiant> ListeEtudiants = new ArrayList<Etudiant>();
+    
+    public String ajouter (String nom, String prenom) {
+    	Etudiant etudiant = new Etudiant (nom, prenom);
+    	ListeEtudiants.add(etudiant);
+    	
+    	return String.format("Ajout effectué avec succès (ID = %d", etudiant.getId());
+    }
+    
+    public ArrayList<Etudiant> lister(){
+    	return ListeEtudiants;
+    }
+}

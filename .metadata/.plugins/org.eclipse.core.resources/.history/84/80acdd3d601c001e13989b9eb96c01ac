@@ -1,0 +1,10 @@
+package Service;
+
+import java.util.ArrayList;
+
+import domaine.Etudiant;
+
+public class GestionEtudiant 
+{
+    private static final ArrayList<Etudiant> ListeEtudiants = new ArrayList<Etudiant>();
+}

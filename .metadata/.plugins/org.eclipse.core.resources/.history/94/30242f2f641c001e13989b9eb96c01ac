@@ -1,0 +1,9 @@
+package Serveur;
+
+import javax.xml.ws.Endpoint;
+
+import Service.GestionEtudiant;
+
+public class SoapServer {
+
+}

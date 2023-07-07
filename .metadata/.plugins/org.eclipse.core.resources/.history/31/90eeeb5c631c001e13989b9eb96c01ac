@@ -1,0 +1,17 @@
+package Service;
+
+import java.util.ArrayList;
+
+import domaine.Etudiant;
+
+public class GestionEtudiant 
+{
+    private static final ArrayList<Etudiant> ListeEtudiants = new ArrayList<Etudiant>();
+    
+    public String ajouter (String nom, String prenom) {
+    	Etudiant etudiant = new Etudiant (nom, prenom);
+    	ListeEtudiants.add(etudiant);
+    	
+    	return String.format("Ajout effectué avec succès (ID = %d", etudiant.getId());
+    }
+}
